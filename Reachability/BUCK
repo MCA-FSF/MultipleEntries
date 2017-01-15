@@ -1,0 +1,18 @@
+
+# build target
+# //Reachability:Reachability
+
+apple_library(
+  name = 'Reachability',
+  srcs = glob(['*.m']),
+  headers = glob(['*.h']),
+  frameworks = [
+    '$SDKROOT/System/Library/Frameworks/Foundation.framework',
+  ],
+  exported_headers = glob([
+     '*h',
+  ]),
+  visibility = [
+    'PUBLIC',
+  ],
+)
